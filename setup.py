@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name="django-helpwanted",
     version='0.1',
-    py_modules=["helpwanted"],
+    packages=["helpwanted"],
     description="Job listings",
     author="Jeremy Carbaugh",
     author_email="jcarbaugh@sunlightfoundation.com",
