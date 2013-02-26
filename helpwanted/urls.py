@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import *
 from helpwanted.feeds import OpenPositionsFeed
 
 urlpatterns = patterns('helpwanted.views',
