@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name="django-helpwanted",
-    version='0.1',
+    version='0.2',
     packages=["helpwanted"],
     description="Job listings",
     author="Jeremy Carbaugh",

@@ -25,7 +25,7 @@ class JobListing(models.Model):
     position_type = models.CharField("Type of employment",  max_length=2, choices=POSITION_TYPE_CHOICES)
     position_description = models.TextField("Description of the position")
     organization = models.CharField("Name of employer", max_length=255)
-    organization_url = models.URLField("URL of employer", verify_exists=False, blank=True, null=True)
+    organization_url = models.URLField("URL of employer", blank=True, null=True)
     location = models.CharField("Location of job opportunity", max_length=255)
 
     contact_name = models.CharField("Name of organizational contact", max_length=255)
