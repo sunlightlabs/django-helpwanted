@@ -1,11 +1,10 @@
 from django.conf.urls import *
 from helpwanted.feeds import OpenPositionsFeed
+from helpwanted.views import JobDetail, JobList
 
-urlpatterns = patterns('helpwanted.views',
-    url(r'^(?P<object_id>\d+)/', 'joblisting_detail', name="job_detail"),
-    url(r'^$', 'joblisting_list', name="job_list"),
-)
-
-urlpatterns += patterns('',
+urlpatterns = patterns(
+    '',
     url(r'^rss/$', OpenPositionsFeed(), name="job_feed"),
+    url(r'^(?P<pk>\d+)/', JobDetail.as_view(), name="job_detail"),
+    url(r'^$', JobList.as_view(), name="job_list"),
 )
